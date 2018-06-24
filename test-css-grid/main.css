@@ -1,0 +1,29 @@
+p {
+	color: red;
+}
+
+/*all div's under the wrapper class have a red background*/
+.wrapper > div {
+	background: red;
+	padding: 1em;
+	border-style: solid;
+	border-color: white;
+}
+
+/*every other div in the wrapper is gray*/
+.wrapper > div:nth-child(odd) {
+	background: #ddd;
+}
+
+.wrapper {
+	display:grid;
+	/*define the width of the grid elements*/
+	grid-template-columns: 50% 50%;
+	/*define a gap between the column divs (vertically)*/
+		/*grid-column-gap: 1em;*/
+	/*define a gap between the row divs (horizontally)*/
+		/*grid-row-gap: 1em;*/
+
+	/*to give a  unified value for the row and column, you can say this*/
+	grid-gap: 1em;
+}
